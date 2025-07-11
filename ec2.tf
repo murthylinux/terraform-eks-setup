@@ -21,3 +21,5 @@ resource "aws_instance" "vikingcloud_ec2" {
   }
 
 }
+
+

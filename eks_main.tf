@@ -15,7 +15,7 @@ resource "aws_eks_cluster" "viking" {
 }
 
 resource "aws_eks_node_group" "viking-node" {
-  cluster_name    = aws_eks_cluster.viking.name
+  cluster_name    = aws_eks_cluster.viking[0].name
   count           = var.create_eks ? 1 : 0
   node_group_name = "${var.cluster_name}-ng"
   node_role_arn   = aws_iam_role.eks_node_group_role.arn
