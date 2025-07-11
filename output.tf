@@ -33,10 +33,13 @@ output "ec2_security_group_id" {
   value = aws_security_group.ec2_sg.id
 }
 
-output "jenkins_server" {
-  value = aws_instance.jenkins_server.id
+output "jenkins_master" {
+  value = aws_instance.jenkins_master.id
 }
 
+output "jenkins_agent" {
+  value = aws_instance.jenkins_agent.id
+}
 output "docker_server" {
   value = aws_instance.docker_server.id
 }
